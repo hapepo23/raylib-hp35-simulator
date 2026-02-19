@@ -1,0 +1,42 @@
+#ifndef HP35_H
+#define HP35_H
+
+void hp35_init(void);
+void hp35_pow(void);
+void hp35_log10(void);
+void hp35_log(void);
+void hp35_exp(void);
+void hp35_clr(void);
+void hp35_sqrt(void);
+void hp35_arc(void);
+void hp35_sin(void);
+void hp35_cos(void);
+void hp35_tan(void);
+void hp35_reciprocal(void);
+void hp35_exchange(void);
+void hp35_rolldown(void);
+void hp35_store(void);
+void hp35_recall(void);
+void hp35_enter(void);
+void hp35_clx(void);
+void hp35_add(void);
+void hp35_sub(void);
+void hp35_mul(void);
+void hp35_div(void);
+void hp35_pi(void);
+void hp35_num0(void);
+void hp35_num1(void);
+void hp35_num2(void);
+void hp35_num3(void);
+void hp35_num4(void);
+void hp35_num5(void);
+void hp35_num6(void);
+void hp35_num7(void);
+void hp35_num8(void);
+void hp35_num9(void);
+void hp35_decimal_point(void);
+void hp35_eex(void);
+void hp35_chs(void);
+char* hp35_display(void);
+
+#endif  // HP35_H
