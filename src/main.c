@@ -3,7 +3,7 @@
 
 #include "hp35.h"
 
-/* HP-35 Simulator, Version 2025-02-19 */
+/* HP-35 Simulator, Version 2025-02-20 */
 
 /* ----------------------------------------------------------------*/
 
@@ -170,6 +170,8 @@ static WidgetData widgets[MAX_WIDGETS] = {
         .position = {51, 325},
         .size = {84, 31},
         .click_event_fn = click,
+        .keycode1 = KEY_KP_ENTER,
+        .keycode2 = KEY_ENTER,
     },
     {
         // 17 chs
@@ -177,6 +179,7 @@ static WidgetData widgets[MAX_WIDGETS] = {
         .position = {153, 325},
         .size = {34, 31},
         .click_event_fn = click,
+        .keycode1 = KEY_S,
     },
     {
         // 18 eex
@@ -184,6 +187,7 @@ static WidgetData widgets[MAX_WIDGETS] = {
         .position = {204, 325},
         .size = {34, 31},
         .click_event_fn = click,
+        .keycode1 = KEY_E,
     },
     {
         // 19 clx
@@ -191,6 +195,7 @@ static WidgetData widgets[MAX_WIDGETS] = {
         .position = {255, 325},
         .size = {34, 31},
         .click_event_fn = click,
+        .keycode1 = KEY_C,
     },
     {
         // 20 -
@@ -198,6 +203,7 @@ static WidgetData widgets[MAX_WIDGETS] = {
         .position = {51, 375},
         .size = {34, 31},
         .click_event_fn = click,
+        .keycode1 = KEY_KP_SUBTRACT,
     },
     {
         // 21 7
@@ -205,6 +211,7 @@ static WidgetData widgets[MAX_WIDGETS] = {
         .position = {102, 375},
         .size = {45, 31},
         .click_event_fn = click,
+        .keycode1 = KEY_KP_7,
     },
     {
         // 22 8
@@ -212,6 +219,7 @@ static WidgetData widgets[MAX_WIDGETS] = {
         .position = {172, 375},
         .size = {45, 31},
         .click_event_fn = click,
+        .keycode1 = KEY_KP_8,
     },
     {
         // 23 9
@@ -219,6 +227,7 @@ static WidgetData widgets[MAX_WIDGETS] = {
         .position = {243, 375},
         .size = {45, 31},
         .click_event_fn = click,
+        .keycode1 = KEY_KP_9,
     },
     {
         // 24 +
@@ -226,6 +235,7 @@ static WidgetData widgets[MAX_WIDGETS] = {
         .position = {51, 425},
         .size = {34, 31},
         .click_event_fn = click,
+        .keycode1 = KEY_KP_ADD,
     },
     {
         // 25 4
@@ -233,6 +243,7 @@ static WidgetData widgets[MAX_WIDGETS] = {
         .position = {102, 425},
         .size = {45, 31},
         .click_event_fn = click,
+        .keycode1 = KEY_KP_4,
     },
     {
         // 26 5
@@ -240,6 +251,7 @@ static WidgetData widgets[MAX_WIDGETS] = {
         .position = {172, 425},
         .size = {45, 31},
         .click_event_fn = click,
+        .keycode1 = KEY_KP_5,
     },
     {
         // 27 6
@@ -247,6 +259,7 @@ static WidgetData widgets[MAX_WIDGETS] = {
         .position = {243, 425},
         .size = {45, 31},
         .click_event_fn = click,
+        .keycode1 = KEY_KP_6,
     },
     {
         // 28 x
@@ -254,6 +267,7 @@ static WidgetData widgets[MAX_WIDGETS] = {
         .position = {51, 475},
         .size = {34, 31},
         .click_event_fn = click,
+        .keycode1 = KEY_KP_MULTIPLY,
     },
     {
         // 29 1
@@ -261,6 +275,7 @@ static WidgetData widgets[MAX_WIDGETS] = {
         .position = {102, 475},
         .size = {45, 31},
         .click_event_fn = click,
+        .keycode1 = KEY_KP_1,
     },
     {
         // 30 2
@@ -268,6 +283,7 @@ static WidgetData widgets[MAX_WIDGETS] = {
         .position = {172, 475},
         .size = {45, 31},
         .click_event_fn = click,
+        .keycode1 = KEY_KP_2,
     },
     {
         // 31 3
@@ -275,6 +291,7 @@ static WidgetData widgets[MAX_WIDGETS] = {
         .position = {243, 475},
         .size = {45, 31},
         .click_event_fn = click,
+        .keycode1 = KEY_KP_3,
     },
     {
         // 32 /
@@ -282,6 +299,7 @@ static WidgetData widgets[MAX_WIDGETS] = {
         .position = {51, 525},
         .size = {34, 31},
         .click_event_fn = click,
+        .keycode1 = KEY_KP_DIVIDE,
     },
     {
         // 33 0
@@ -289,6 +307,7 @@ static WidgetData widgets[MAX_WIDGETS] = {
         .position = {102, 525},
         .size = {45, 31},
         .click_event_fn = click,
+        .keycode1 = KEY_KP_0,
     },
     {
         // 34 .
@@ -296,6 +315,7 @@ static WidgetData widgets[MAX_WIDGETS] = {
         .position = {172, 525},
         .size = {45, 31},
         .click_event_fn = click,
+        .keycode1 = KEY_KP_DECIMAL,
     },
     {
         // 35 pi
@@ -303,6 +323,7 @@ static WidgetData widgets[MAX_WIDGETS] = {
         .position = {243, 525},
         .size = {45, 31},
         .click_event_fn = click,
+        .keycode1 = KEY_P,
     },
     {
         // 36
