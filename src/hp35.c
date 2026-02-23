@@ -17,6 +17,7 @@ static unsigned long long x_pre, x_post;
 static unsigned int x_exp;  // 00..99
 static bool x_neg, x_exp_neg;
 static unsigned numcount;  // max. 10
+static unsigned postzerocount;
 // Display
 static char display[100];
 // Switches
@@ -38,6 +39,11 @@ static void hp35_convert_input(void) {
   x = x_post;
   while (x >= 1.0)
     x /= 10.0;
+  int pzc = postzerocount;
+  while (pzc > 0) {
+    x /= 10.0;
+    pzc--;
+  }
   x += x_pre;
   if (x_exp > 0)
     x = x * pow(10., x_exp_neg ? -1. * (double)x_exp : (double)x_exp);
@@ -68,6 +74,7 @@ static void hp35_reset(void) {
   x_neg = false;
   x_exp_neg = false;
   numcount = 0;
+  postzerocount = 0;
 }
 
 static void hp35_enter_digit(int digit) {
@@ -79,6 +86,8 @@ static void hp35_enter_digit(int digit) {
   } else if (enter_num_post) {
     if (numcount < 10) {
       x_post = x_post * 10 + digit;
+      if (x_post == 0 && digit == 0)
+        postzerocount++;
       numcount++;
     }
   } else if (enter_exp) {
@@ -97,6 +106,7 @@ static void hp35_enter_digit(int digit) {
     x_neg = false;
     x_exp_neg = false;
     numcount = 1;
+    postzerocount = 0;
   }
   hp35_convert_input();
 }
@@ -341,8 +351,9 @@ char* hp35_display(void) {
     sprintf(buf, "%llu", x_post);
     char buf2[20];
     sprintf(buf2, "%02u", x_exp);
-    sprintf(display, "%s%llu%s%s%s%s", x_neg ? "-" : " ", x_pre,
-            x_post == 0 ? "" : ".", x_post == 0 ? "" : buf,
+    sprintf(display, "%s%llu%s%.*s%s%s%s", x_neg ? "-" : " ", x_pre,
+            x_post == 0 && postzerocount == 0 ? "" : ".", postzerocount,
+            "00000000000", x_post == 0 ? "" : buf,
             x_exp != 0 && x_exp_neg ? "E-" : "E+", x_exp != 0 ? buf2 : "");
   } else {
     if (x > 9.999999999e+99)
