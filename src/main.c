@@ -3,7 +3,7 @@
 
 #include "hp35.h"
 
-/* HP-35 Simulator, Version 2025-02-20 */
+/* HP-35 Simulator, Version 2025-06-01 */
 
 /* ----------------------------------------------------------------*/
 
@@ -328,7 +328,7 @@ static WidgetData widgets[MAX_WIDGETS] = {
     {
         // 36
         .type = IMAGE,
-        .filename = "bg.jpg",
+        .filename = "bg.png",
         .position = {0, 0},
     },
     {
