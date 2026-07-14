@@ -2,7 +2,7 @@
 
 Inspired by the [HP-35](https://www.hpmuseum.org/hp35.htm), the first pocket calculator with transcendental functions and the first with RPN (see also [Wikipedia](https://en.wikipedia.org/wiki/HP-35)). 
 
-Some features (e.g. display, overflow, underflow) of the original product are not be correctly simulated. 
+Some characteristics of the original product (e.g. display, overflow, underflow) are not correctly simulated. 
 
 All licenses and trademarks are the property of their respective owners. 
 
