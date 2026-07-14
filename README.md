@@ -6,7 +6,7 @@ Some characteristics of the original product (e.g. display, overflow, underflow)
 
 All licenses and trademarks are the property of their respective owners. 
 
-The used [7-segment TTF font "seg7.ttf"](http://www.loosweb.de/common/de/7seg.html) is © [Robert Loos](http://www.loosweb.de) (free for any use except for sale).
+The used [7-segment TTF font "seg7.ttf"](http://www.loosweb.de/scale/doc/en/download.html) is © [Robert Loos](http://www.loosweb.de/indexen.html) (free for any use except for sale).
 
 ![Snapshot](snapshot.png)
 
